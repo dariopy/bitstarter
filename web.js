@@ -6,10 +6,7 @@ app.use(express.logger());
 
 
 function readFromFile(filename){
-  var msgBuf = fs.readFileSync(filename, function(err, data){
-    if (err) throw err;
-    console.log(data);
-  });
+  var msgBuf = fs.readFileSync(filename);
   return msgBuf.toString();
 }
 
